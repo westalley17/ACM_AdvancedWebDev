@@ -1,7 +1,11 @@
 import { useState } from "react";
 // 4. Componentization & Props
 function Button({ onClick, text }) {
-    return <button onClick={onClick}>{text}</button>;
+    let btnColor = "btn btn-danger";
+    if (text === "Increment") {
+        btnColor = "btn btn-primary"
+    }
+    return <button className={btnColor} onClick={onClick}>{text}</button>;
 }
 
 export default function Example4() {

@@ -7,8 +7,8 @@ export default function Example2() {
     return (
         <div>
             <h2>Counter: {count}</h2>
-            <button onClick={() => setCount(count + 1)}>Increment</button>
-            <button onClick={() => setCount(count - 1)}>Decrement</button>
+            <button className="btn btn-primary" onClick={() => setCount(count + 1)}>Increment</button>
+            <button className="btn btn-danger" onClick={() => setCount(count - 1)}>Decrement</button>
         </div>
     );
 }
