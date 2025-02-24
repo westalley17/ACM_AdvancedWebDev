@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACM - Advanced Web Dev</title>
+</head>
+
+<body>
+    <!-- 4. Componentization with jQuery (Simulated) -->
+    <h2>Counter with jQuery Function: <span id="count2">0</span></h2>
+    <div id="counter-container">
+        <button class="btn" data-action="inc">Increment</button>
+        <button class="btn" data-action="dec">Decrement</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            let count = 0;
+            function updateCount(change) {
+                count += change;
+                $("#count2").text(count);
+            }
+            $(".btn").click(function () {
+                const action = $(this).data("action");
+                updateCount(action === "inc" ? 1 : -1);
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACM - Advanced Web Dev</title>
+</head>
+
+<body>
+    <!-- 3. Fetch Data with jQuery -->
+    <h2>Fetched Data:</h2>
+    <ul id="data-list"></ul>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.get("https://jsonplaceholder.typicode.com/posts?_limit=5", function (data) {
+                data.forEach(item => {
+                    $("#data-list").append(`<li>${item.title}</li>`);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
